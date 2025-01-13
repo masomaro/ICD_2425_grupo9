@@ -22,16 +22,8 @@ def modelo_lda(html_file):
     with open(html_file, 'r', encoding='utf-8') as f:
         html_string = f.read()
     
-    # Salvar o HTML em um arquivo temporário
-    temp_html_path = 'lda_temp.html'
-    with open(temp_html_path, 'w', encoding='utf-8') as temp_file:
-        temp_file.write(html_string)
-    
-    # Abrir o arquivo HTML em uma nova aba/janela no navegador ao clicar no botão
-    if st.button('Abrir Visualização Interativa'):
-        new_window_url = 'file:///' + os.path.abspath(temp_html_path)
-        webbrowser.open_new_tab(new_window_url)
-        st.success("A visualização foi aberta numa nova janela.")
+    # Exibir o HTML diretamente no Streamlit com scrolling horizontal
+    st.components.v1.html(html_string, height=900, scrolling=True, width=1200)
     
 def countDocs(df):
     # Agrupar por 'Cluster' e contar o número de 'Title'
