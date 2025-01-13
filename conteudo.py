@@ -73,9 +73,8 @@ def ShowingTopics():
             "Estudos tecnológicos: análise de dados e tecnologias emergentes em áreas científicas ligadas com a educação e a informação."
         ]
     }
-
     df_topics = pd.DataFrame(topic_data)
-    st.dataframe(df_topics)
+    st.write(df_topics.to_html(index=False), unsafe_allow_html=True)
     
 def conclusão():
     st.write("""
@@ -125,10 +124,11 @@ def analise_conteudo(df):
     # Inserir aqui a tabela sintese
     table1 = 'imgs/tabela_topicos.jpg'
     st.write("Tabela 1 - Tabela síntese dos tópicos e descrição ")
-    showimage(table1, "")
+    ShowingTopics()
     
     # Tabelas
     df_topics= pd.read_csv('data/document_topic_distribution.csv', sep=';')
+    df_topics=df_topics
     st.write("Tabela 2 - Distribuição de coeficientes de cada documento por tópico ")
     st.dataframe(df_topics)
     

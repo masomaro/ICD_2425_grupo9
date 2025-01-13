@@ -92,15 +92,16 @@ def visao_geral(df):
     st.text("CSV da Scopus em bruto")
     st.dataframe(df)
     
-    
+
 # Menu na barra lateral
 with st.sidebar:
     selected = option_menu(
         "Índice",
-        ["Introdução",
+        [
+        "Introdução",
         "Análise Bibliométrica",
-        "Análise de Conteúdo",
-        "Conclusão"],
+        "Análise de Conteúdo"
+        ],
         default_index=0,
     )
 
@@ -115,9 +116,8 @@ elif selected == "Análise Bibliométrica":
 
 elif selected == "Análise de Conteúdo":
     cont.analise_conteudo(df)
-elif selected == "Conclusão":
-    cont.ShowingTopics()
     st.divider()
+    st.header("Conclusão")
     cont.conclusão()
     
 
