@@ -23,6 +23,10 @@ def top_documents_and_distribution(df):
     year = st.slider("Selecionar o ano:", min_value=1990, max_value=2024)
     df_year = df[df['Year'] == year]
     
+    # Distribuição de documentos por ano
+    st.subheader("Distribuição de documentos por ano")
+    st.write(f"Número de documentos publicados em {year}: {len(df_year)}")
+    
     # Gráfico de linhas que destaca o ano selecionado
     fig, ax = plt.subplots(figsize=(10, 5))
     sns.lineplot(data=df.groupby('Year').size(), ax=ax)
@@ -38,11 +42,11 @@ def top_documents_and_distribution(df):
     st.write(f"Citações a documentos do ano {year}:")
     st.dataframe(top_cited_articles)
     
-    # Distribuição de documentos por ano
-    st.subheader("Distribuição de documentos por ano")
-    st.write(f"Número de documentos publicados em {year}: {len(df_year)}")
     
     st.subheader("Palavras-chave")
+    
+    st.write("""Palavras-chaves de indexação mais frequentes: 
+            “artificial intelligence”, “scientific researches”, “human”, “machine learning” “deep learning”..""")
     
     # Top de keywords de autor e de indexação em colunas
     col1, col2 = st.columns(2)
@@ -58,12 +62,7 @@ def top_documents_and_distribution(df):
         st.write(f"Keywords de indexação nos documentos de {year}:")
         st.dataframe(top_index_keywords)
         
-    st.write("""As palavras-chaves de indexação atribuídas aos documentos que se revelaram mais frequentes são:
-            “artificial intelligence”, 
-            “scientific researches”, 
-            “human”, 
-            “machine learning”
-            “deep learning”.""")
+    
 
 def geoMapdocuments(df_country, color_scale=px.colors.sequential.Plasma):
     st.header("Distribuição de número de documentos por país")

@@ -74,7 +74,7 @@ def conclusão():
             - Automatização: estudos de processos automáticos que visam aumentar a eficiência da investigação;
             - Métodos de aprendizagem computacional (machine learning) e de redes neurais (deep learning);
             - Questões éticas sobre o uso da inteligência artificial na investigação científica;
-            - Aplicação na investigação das áreas de tomada de decisão (decision making), medicina e estudos climáticos, para além das tecnologias de informação;
+            - Aplicação na investigação das áreas de tomada de decisão (decision making), medicina e estudos climáticos, para além das tecnologias de informação.
             
             """)
     #img1 = Image.open('imgs/Designer.png')
