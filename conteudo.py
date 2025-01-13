@@ -171,7 +171,7 @@ def analise_conteudo(df):
     # TOPICOS
     # Inserir aqui a tabela sintese
     table1 = 'imgs/tabela_topicos.jpg'
-    st.write("Tabela 1 - Tabela síntese dos topicos e descrição ")
+    st.write("Tabela 1 - Tabela síntese dos tópicos e descrição ")
     showimage(table1, "")
     
     # Tabelas

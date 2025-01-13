@@ -18,6 +18,12 @@ import conteudo as cont
 #Funções a serem utilizadas dentro de funções do menu
 
 def apresentacao():
+    st.write ("""
+            Trabalho realizado por: Magda Matias ( nº mec 50091) e Rita Gonçalves (nº mec 30099)
+            Disciplina: Introdução à Ciência de Dados
+            Curso: Mestrado em Ciência de Dados para Ciências Sociais
+            """)
+    st.divider()
     st.subheader("Recolha de informação")
     st.markdown("""
                     A fonte selecionada para a pesquisa bibliográfica foi a base de dados multidisciplinar Scopus.
