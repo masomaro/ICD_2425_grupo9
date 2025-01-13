@@ -152,11 +152,11 @@ def analise_conteudo(df):
     st.header("Vetorização")
     
     st.subheader("Bigramas")
-    graphic1='imgs\Bigrama.png'
+    graphic1='imgs/Bigrama.png'
     showimage(graphic1, "Bigramas mais frequentes")
     
     st.subheader("Term Frequency - Inverse Document Frequency (TF-IDF)")
-    graphic2='imgs\TFIDF.png'
+    graphic2='imgs/TFIDF.png'
     showimage(graphic2, "Tabela de frequência de palavras")
     
     # Topicos
@@ -165,7 +165,7 @@ def analise_conteudo(df):
     
     # Modelo LDA: por motivos de tamanho da imagem, vai ser aberto numa nova janela
     st.subheader("Modelo LDA")
-    graphic3='imgs\lda_vis.html'
+    graphic3='imgs/lda_vis.html'
     modelo_lda(graphic3)
     
     # TOPICOS
@@ -175,11 +175,11 @@ def analise_conteudo(df):
     showimage(table1, "")
     
     # Tabelas
-    df_topics= pd.read_csv(r'data\document_topic_distribution.csv', sep=';')
+    df_topics= pd.read_csv('data/document_topic_distribution.csv', sep=';')
     st.write("Tabela 2 - Distribuição de coeficientes de cada documento por tópico ")
     st.dataframe(df_topics)
     
-    df_docs=pd.read_csv(r'data\most_relevant_docs.csv', sep=";")
+    df_docs=pd.read_csv('data/most_relevant_docs.csv', sep=";")
     st.write("Tabela 3 - Top 3 de documentos por tópico")
     st.dataframe(df_docs)
     
@@ -187,7 +187,7 @@ def analise_conteudo(df):
     # CLUSTERS
     st.subheader("Clusterização")
     # Tabela com os clusters e documentos que lhe são associados
-    df_clusters = pd.read_csv(r'data\clustered_documents.csv', sep=";")
+    df_clusters = pd.read_csv('data/clustered_documents.csv', sep=";")
     st.write("Tabela 3 - Distribuição de documentos por cluster")
     st.dataframe(df_clusters)
     
@@ -200,6 +200,6 @@ def analise_conteudo(df):
     with col2: 
         countDocs(df_clusters)
 
-    heatmap ='imgs\heatmap_cluster_topics.png'
+    heatmap ='imgs/heatmap_cluster_topics.png'
     showimage(heatmap, "Mapa de calor que relaciona os tópicos com os clusters")
     
