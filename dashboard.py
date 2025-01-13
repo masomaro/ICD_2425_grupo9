@@ -9,7 +9,6 @@ from geopy.geocoders import Nominatim
 from geopy.exc import GeocoderTimedOut, GeocoderQuotaExceeded, GeocoderServiceError
 
 
-
 # importaçao ficheiros py
 import bibliometrica as bib
 import conteudo as cont
@@ -100,7 +99,8 @@ with st.sidebar:
         [
         "Introdução",
         "Análise Bibliométrica",
-        "Análise de Conteúdo"
+        "Análise de Conteúdo",
+        "Conclusão"
         ],
         default_index=0,
     )
@@ -116,8 +116,9 @@ elif selected == "Análise Bibliométrica":
 
 elif selected == "Análise de Conteúdo":
     cont.analise_conteudo(df)
-    st.divider()
-    st.header("Conclusão")
+elif selected == "Conclusão":
+    st.title("Conclusão")
     cont.conclusão()
+    
     
 

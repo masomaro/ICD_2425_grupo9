@@ -78,11 +78,12 @@ def ShowingTopics():
     
 def conclusão():
     st.write("""
-            O impacto da inteligência artificial na investigação cientifica poderá estar relacionado com:  
+            O impacto da inteligência artificial na investigação científica poderá estar relacionado com:  
             - Automatização: estudos de processos automáticos que visam aumentar a eficiência da investigação;
-            - Métodos de aprendizagem computacional e de redes neurais;
-            - Questões éticas sobre o uso da IA na investigação científica;
-            - Aplicação na investigação das áreas de tomada de decisão (decision-making), medicina e estudos climáticos, para além das TI;
+            - Métodos de aprendizagem computacional (machine learning) e de redes neurais (deep learning);
+            - Questões éticas sobre o uso da inteligência artificial na investigação científica;
+            - Aplicação na investigação das áreas de tomada de decisão (decision making), medicina e estudos climáticos, para além das tecnologias de informação;
+            
             """)
     #img1 = Image.open('imgs/Designer.png')
     #showimage(img1, "Imagem gerada pelo Copilot")
@@ -111,7 +112,7 @@ def analise_conteudo(df):
     graphic2='imgs/TFIDF.png'
     showimage(graphic2, "Tabela de frequência de palavras")
     
-    # Topicos
+
     st.divider()
     st.header("Dimensões latentes - Tópicos")
     
@@ -126,6 +127,9 @@ def analise_conteudo(df):
     st.write("Tabela 1 - Tabela síntese dos tópicos e descrição ")
     ShowingTopics()
     
+    st.divider()
+    # CLUSTERS
+    st.subheader("Clusterização")
     # Tabelas
     df_topics= pd.read_csv('data/document_topic_distribution.csv', sep=';')
     df_topics=df_topics
@@ -136,12 +140,10 @@ def analise_conteudo(df):
     st.write("Tabela 3 - Top 3 de documentos por tópico")
     st.dataframe(df_docs)
     
-    st.divider()
-    # CLUSTERS
-    st.subheader("Clusterização")
+    
     # Tabela com os clusters e documentos que lhe são associados
     df_clusters = pd.read_csv('data/clustered_documents.csv', sep=";")
-    st.write("Tabela 3 - Distribuição de documentos por cluster")
+    st.write("Tabela 4 - Distribuição de documentos por cluster")
     st.dataframe(df_clusters)
     
     #Mostrar topicos e clusters lado a lado

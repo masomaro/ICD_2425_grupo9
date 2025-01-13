@@ -19,10 +19,18 @@ def top_documents_and_distribution(df):
     Parâmetros:
     df - DataFrame contendo os documentos
     """
-    
     # Seleção do ano
     year = st.slider("Selecionar o ano:", min_value=1990, max_value=2024)
     df_year = df[df['Year'] == year]
+    
+    # Gráfico de linhas que destaca o ano selecionado
+    fig, ax = plt.subplots(figsize=(10, 5))
+    sns.lineplot(data=df.groupby('Year').size(), ax=ax)
+    ax.axvline(year, color='red', linestyle='--')
+    ax.set_title("Distribuição de documentos por ano")
+    ax.set_xlabel("Ano")
+    ax.set_ylabel("Número de documentos")
+    st.pyplot(fig)
     
     # Top 10 de documentos mais citados
     st.subheader("Número de citações")
@@ -33,15 +41,6 @@ def top_documents_and_distribution(df):
     # Distribuição de documentos por ano
     st.subheader("Distribuição de documentos por ano")
     st.write(f"Número de documentos publicados em {year}: {len(df_year)}")
-    
-    # Gráfico de linhas que destaca o ano selecionado
-    fig, ax = plt.subplots(figsize=(10, 5))
-    sns.lineplot(data=df.groupby('Year').size(), ax=ax)
-    ax.axvline(year, color='red', linestyle='--')
-    ax.set_title("Distribuição de documentos por ano")
-    ax.set_xlabel("Ano")
-    ax.set_ylabel("Número de documentos")
-    st.pyplot(fig)
     
     st.subheader("Palavras-chave")
     
@@ -58,6 +57,13 @@ def top_documents_and_distribution(df):
         top_index_keywords = df_year['Index Keywords'].value_counts().head(10)
         st.write(f"Keywords de indexação nos documentos de {year}:")
         st.dataframe(top_index_keywords)
+        
+    st.write("""As palavras-chaves de indexação atribuídas aos documentos que se revelaram mais frequentes são:
+            “artificial intelligence”, 
+            “scientific researches”, 
+            “human”, 
+            “machine learning”
+            “deep learning”.""")
 
 def geoMapdocuments(df_country, color_scale=px.colors.sequential.Plasma):
     st.header("Distribuição de número de documentos por país")

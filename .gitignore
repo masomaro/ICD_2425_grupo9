@@ -77,8 +77,6 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
-lda_temp.html
-/imgs
 
 # IPython
 profile_default/
