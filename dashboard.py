@@ -117,5 +117,7 @@ elif selected == "Análise de Conteúdo":
     cont.analise_conteudo(df)
 elif selected == "Conclusão":
     cont.ShowingTopics()
+    st.divider()
+    cont.conclusão()
     
 

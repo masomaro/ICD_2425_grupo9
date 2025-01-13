@@ -64,6 +64,7 @@ dependencies:
   - debugpy=1.8.11=py312h5da7b33_0
   - decorator=5.1.1=pyhd3eb1b0_0
   - defusedxml=0.7.1=pyhd3eb1b0_0
+  - emoji=2.14.0=pyhd8ed1ab_1
   - executing=0.8.3=pyhd3eb1b0_0
   - expat=2.6.4=h8ddb27b_0
   - fiona=1.10.1=py312h5da7b33_0
@@ -186,7 +187,6 @@ dependencies:
   - parso=0.8.4=py312haa95532_0
   - pcre2=10.42=h0ff8eda_1
   - pillow=11.0.0=py312h096bfcc_1
-  - pip=24.2=py312haa95532_0
   - pixman=0.40.0=h2bbff1b_1
   - platformdirs=3.10.0=py312haa95532_0
   - plotly=5.24.1=py312hfc267ef_0
@@ -253,6 +253,7 @@ dependencies:
   - srsly=2.4.8=py312hd77b12b_1
   - stack_data=0.2.0=pyhd3eb1b0_0
   - streamlit=1.40.1=py312haa95532_0
+  - streamlit_option_menu=0.4.0=pyhd8ed1ab_0
   - tbb=2021.8.0=h59b6b97_0
   - tenacity=9.0.0=py312haa95532_0
   - terminado=0.17.1=py312haa95532_0
@@ -300,6 +301,7 @@ dependencies:
       - en-core-web-sm==3.7.1
       - kagglehub==0.3.4
       - pandadoc==0.1.0
+      - pip==24.3.1
       - pyahocorasick==2.1.0
       - python-decouple==3.8
       - textsearch==0.0.24

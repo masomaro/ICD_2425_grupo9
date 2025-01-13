@@ -75,65 +75,18 @@ def ShowingTopics():
     }
 
     df_topics = pd.DataFrame(topic_data)
-
-    st.header("Tópicos")
     st.dataframe(df_topics)
     
-    st.divider()
-    
-    st.header("As dimensões latentes sobre o impacto da IA na investigação científica")
-    st.subheader("Tópico 0 - Tecnologia e Ciência da Informação")
-    st.markdown("""
-                <div style="font-size:20px;">
-                Documentos sobre a relação entre a tecnologia, ciência 
-                e gestão de informação em áreas como a medicina e a públicação cientifica.
-                </div>
-                """, unsafe_allow_html=True)
-    st.text("\n")
-    
-    st.subheader("Tópico 1 - Big Data e modelos")
-    st.markdown("""
-                <div style="font-size:20px;">
-                Documentos sobre análise de grandes conjuntos de dados e de modelos.
-                </div>
-                """, unsafe_allow_html=True)
-    st.text("\n")
-    
-    st.subheader("Tópico 2 - Inteligência Artifical e ética")
-    st.markdown("""
-                <div style="font-size:20px;">
-                Documentos sobre estudos sobre questões éticas e o impacto de 
-                tecnologias e modelos de IA, como o ChatGPT.
-                </div>
-                """, unsafe_allow_html=True)
-    st.text("\n")
-    
-    st.subheader("Tópico 3 - Sistemas tecnológicos")
-    st.markdown("""
-                <div style="font-size:20px;">
-                Documentos sobre o desenvolvimento e aplicação de sistemas 
-                inteligentes e de modelos de aprendizagem automática.
-                </div>
-                """, unsafe_allow_html=True)
-    st.text("\n")
-    
-    st.subheader("Tópico 4 - Modelos tecnológicos")
-    st.markdown("""
-                <div style="font-size:20px;">
-                Documentos sobre o estudo e aplicação de tecnologias na 
-                gestão de recursos hídricos, com base em dados científicos.
-                </div>
-                """, unsafe_allow_html=True)
-    st.text("\n")
-    
-    st.subheader("Tópico 5 - Estudos tecnológicos")
-    st.markdown("""
-                <div style="font-size:20px;">
-                Documentos sobre a análise de dados e tecnologias emergentes em 
-                áreas científicas ligadas com a educação e a informação.
-                </div>
-                """, unsafe_allow_html=True)
-    st.text("\n")
+def conclusão():
+    st.write("""
+            O impacto da inteligência artificial na investigação cientifica poderá estar relacionado com:  
+            - Automatização: estudos de processos automáticos que visam aumentar a eficiência da investigação;
+            - Métodos de aprendizagem computacional e de redes neurais;
+            - Questões éticas sobre o uso da IA na investigação científica;
+            - Aplicação na investigação das áreas de tomada de decisão (decision-making), medicina e estudos climáticos, para além das TI;
+            """)
+    #img1 = Image.open('imgs/Designer.png')
+    #showimage(img1, "Imagem gerada pelo Copilot")
 
 
 def analise_conteudo(df):
