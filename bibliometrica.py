@@ -46,7 +46,7 @@ def top_documents_and_distribution(df):
     st.subheader("Palavras-chave")
     
     st.write("""Palavras-chaves de indexação mais frequentes: 
-            “artificial intelligence”, “scientific researches”, “human”, “machine learning” “deep learning”..""")
+            “artificial intelligence”, “scientific researches”, “human”, “machine learning” “deep learning”.""")
     
     # Top de keywords de autor e de indexação em colunas
     col1, col2 = st.columns(2)
