@@ -175,11 +175,11 @@ def analise_conteudo(df):
     showimage(table1, "")
     
     # Tabelas
-    df_topics= pd.read_csv('data\document_topic_distribution.csv', sep=';')
+    df_topics= pd.read_csv(r'data\document_topic_distribution.csv', sep=';')
     st.write("Tabela 2 - Distribuição de coeficientes de cada documento por tópico ")
     st.dataframe(df_topics)
     
-    df_docs=pd.read_csv('data\most_relevant_docs.csv', sep=";")
+    df_docs=pd.read_csv(r'data\most_relevant_docs.csv', sep=";")
     st.write("Tabela 3 - Top 3 de documentos por tópico")
     st.dataframe(df_docs)
     
@@ -187,7 +187,7 @@ def analise_conteudo(df):
     # CLUSTERS
     st.subheader("Clusterização")
     # Tabela com os clusters e documentos que lhe são associados
-    df_clusters = pd.read_csv('data\clustered_documents.csv', sep=";")
+    df_clusters = pd.read_csv(r'data\clustered_documents.csv', sep=";")
     st.write("Tabela 3 - Distribuição de documentos por cluster")
     st.dataframe(df_clusters)
     

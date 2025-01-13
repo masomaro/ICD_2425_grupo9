@@ -9,6 +9,7 @@ from geopy.geocoders import Nominatim
 from geopy.exc import GeocoderTimedOut, GeocoderQuotaExceeded, GeocoderServiceError
 
 
+
 # importaçao ficheiros py
 import bibliometrica as bib
 import conteudo as cont
@@ -71,9 +72,9 @@ st.set_page_config(
 
 #Dataframes necessárias
 
-df = pd.read_csv('data\scopus.csv')
-df_country = pd.read_csv('data\Scopus-Country.csv')
-df_subject = pd.read_csv('data\Scopus-Subject.csv')
+df = pd.read_csv(r'data\scopus.csv')
+df_country = pd.read_csv(r'data\Scopus-Country.csv')
+df_subject = pd.read_csv(r'data\Scopus-Subject.csv')
 
 
 # Funções para cada seção do menu
