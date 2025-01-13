@@ -18,11 +18,9 @@ import conteudo as cont
 #Funções a serem utilizadas dentro de funções do menu
 
 def apresentacao():
-    st.write ("""
-            Trabalho realizado por: Magda Matias ( nº mec 50091) e Rita Gonçalves (nº mec 30099)
-            Disciplina: Introdução à Ciência de Dados
-            Curso: Mestrado em Ciência de Dados para Ciências Sociais
-            """)
+    st.write ("Trabalho realizado por: Magda Matias ( nº mec. 50091; magda.matias@ua.pt) e Rita Gonçalves (nº mec. 30099; ritaisabel@ua.pt)")
+    st.write("Disciplina: Introdução à Ciência de Dados")
+    st.write("Curso: Mestrado em Ciência de Dados para Ciências Sociais")
     st.divider()
     st.subheader("Recolha de informação")
     st.markdown("""
